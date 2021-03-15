@@ -1,0 +1,231 @@
+1
+package com.pack;
+
+public class HandsOn1 {
+
+	public static void main(String[] args) {
+		int x=5;
+		while(x>1)
+		{
+			x=x+1;
+			System.out.println(x);
+			if(x<3)
+			{
+				System.out.println("small x");
+			}
+		}
+	}
+}
+
+2
+package com.pack;
+
+public class HandsOn2 {
+
+	public static void main(String[] args) {
+		int x=1;
+		while(x<10)
+		{
+			if(x>3) {
+				System.out.println("big x");
+			}
+		}
+
+	}
+
+}
+
+3
+package com.pack;
+
+public class HandsOn3 {
+
+	public static void main(String[] args) {
+		int x=5;
+		while(x>1)
+		{
+			x=x+1;
+			if(x<3)
+			{
+				System.out.println("small x");
+			}
+		}
+	}
+
+}
+
+4
+package com.pack;
+
+public class HandsOn4 {
+
+	public static void main(String[] args) {
+		System.out.println("Hello world!\n"+" It 's been nice knowing you\n"+"Goodbye world!");
+
+	}
+
+}
+5
+package com.pack;
+import java.io.*;
+import java.util.*;
+
+public class HandsOn5 {
+
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		int p;
+		System.out.println("enter p");
+		p=s.nextInt();
+		int i,j;
+		for(i=0;i<p;i++)
+		{
+			for(j=0;j<p;j++)
+			{
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		
+		for ( i=0; i<p; i++) 
+		{
+			for (j=p-i; j>1; j--) 
+		
+        { 
+            System.out.print(" "); 
+        }  
+        for (j=0; j<=i; j++ ) 
+        { 
+            System.out.print("* "); 
+        } 
+        System.out.println(); 
+		}
+	}
+
+}
+6
+package com.pack;
+
+public class HandOn6 {
+
+	public static void main(String[] args) {
+		for(int i=0;i<=36;++i) {
+			System.out.println(i);
+		}
+
+	}
+
+}
+7
+package com.pack;
+
+public class HandsOn7 {
+
+	public static void main(String[] args) {
+		String name="Rank";
+		System.out.println("Hello + name");
+	}
+
+}
+8
+package com.pack;
+
+public class HandsOn8 {
+
+	public static void main(String[] args) {
+		int i;
+		System.out.println("Hello ");
+		i=0;//inplace of zero insret 1 then it will works
+		while(i<=args.length-1)
+		{
+			System.out.println(args[i]+" ");
+			i=i+1;
+		}
+System.out.println();
+	}
+
+}
+9
+package com.pack;
+import java.util.*;
+
+public class HandsOn9 {
+
+	public static void main(String[] args) {
+		double r,a;
+		final double pi=Math.PI;
+		r=1.0f;
+		a=pi*r*r;
+		display(r,a);
+		r=1.5f;
+		a=pi*r*r;
+		display(r,a);
+		r=2.0f;
+		a=pi*r*r;
+		display(r,a);
+
+	}
+	static void display(double r,double a)
+	{
+		System.out.println("For radius ="+ r + "area=" + a);
+	}
+
+}
+10
+
+package com.pack;
+import java.util.*;
+
+public class HandsOn10 {
+
+	public static void main(String[] args) {
+		double c;
+		//Scanner s=new Scanner(System.in);
+		int n;
+		String str=args[0];
+		System.out.println(" Enter no of inches");
+		n = Integer.parseInt(str);
+		c=n*2.54;
+		System.out.println(n +" inches in centimeters="+ c);
+		
+		
+
+	}
+
+}
+
+11
+
+package com.pack;
+import java.util.*;
+
+public class HandsOn11 {
+
+	public static void main(String[] args) {
+		double h=0,payrate = 0,totalpay;
+
+		String str=args[0];
+		String str1=args[1];
+	
+		h=Double.parseDouble(str);
+		 payrate=Double.parseDouble(str1);
+		System.out.println(h);
+		System.out.println(payrate);
+		totalpay=h*payrate;
+		System.out.println(totalpay);
+		
+	}
+
+}
+
+
+12
+package com.pack;
+public class HandsOn12{
+public static void main (String args[]) {
+int p = 0;
+String s = (p<40)?"life":(p>50)?"universe":"everything";
+
+        System.out.println(s);
+    }
+}

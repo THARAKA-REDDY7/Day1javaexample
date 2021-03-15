@@ -1,0 +1,472 @@
+1)
+package com.day3;
+
+import java.util.Scanner;
+
+class Venue{
+	String name;
+	String city;
+	Venue(){
+		Scanner s=new Scanner(System.in);
+		System.out.println("Enter the Venue name");
+		name=s.next();
+		System.out.println(name);
+		System.out.println("Enter the city name");
+		city=s.next();
+		System.out.println(city);
+		
+	}
+		
+}
+
+public class Main {
+
+	public static void main(String[] args) {
+		Venue v=new Venue();	
+
+	}
+
+}
+
+2)
+package com.day3;
+import java.util.Scanner;
+
+class Player{
+	String name;
+	String country;
+	String skill;
+	Player(){
+		Scanner s=new Scanner(System.in);
+		System.out.println("Enter the player name");
+		name=s.next();
+		System.out.println(name);
+		System.out.println("Enter the country name");
+		country=s.next();
+		System.out.println(country);
+		System.out.println("Enter skill");
+		skill=s.next();
+		System.out.println(skill);
+		
+	}
+		
+}
+
+public class Main1 {
+
+	public static void main(String[] args) {
+		Player p=new Player();
+
+	}
+
+}
+
+3)
+package com.day3;
+
+import java.util.Scanner;
+
+class Delivery{
+	public long over;
+	public long ball;
+	public long runs;
+	public String batsman;
+	public String bowler;
+	public String nonStriker;
+	void displayDeliveryDetails(){
+		Scanner s=new Scanner(System.in);
+		System.out.println("Enter the over");
+		over=s.nextLong();
+		System.out.println("Over: "+over);
+		System.out.println("Enter the ball");
+		ball=s.nextLong();
+		System.out.println("Ball: "+ball);
+		System.out.println("Enter the runs");
+		runs=s.nextLong();
+		System.out.println("Runs: "+runs);
+		System.out.println("Enter the batsman name");
+		batsman=s.next();
+		System.out.println("Batsman: "+batsman);
+		System.out.println("Enter the bowler name");
+		bowler=s.next();
+		System.out.println("Bowler: "+bowler);
+		System.out.println("Enter the nonStriker name");
+		nonStriker=s.next();
+		System.out.println("NonStriker: "+nonStriker);
+
+
+		
+	}
+}
+
+public class Main3 {
+
+	public static void main(String[] args) {
+	Delivery d=new Delivery();
+	d.displayDeliveryDetails();
+
+	}
+
+}
+4)
+
+package com.day3;
+
+import java.util.Scanner;
+
+class Player2
+{
+	String name;
+	String country;
+	String skill;
+	Player2(){
+		Scanner s=new Scanner(System.in);
+		System.out.println("Enter the player details");
+		String pd=s.next();
+		System.out.println("Player Details");
+		String[] str=pd.split(",");
+		for(int i=0;i<str.length;i++)
+		{
+			switch(i)
+			{
+			case 0:
+			{
+				System.out.println("Player Name: "+str[0]);
+				break;
+			}
+			case 1:
+			{
+				System.out.println("Country: " +str[1]);
+				break;
+			}
+			case 2:
+			{
+				System.out.println("Skill: "+str[2]);
+				break;
+			}
+			}
+		}
+		
+		
+	}
+		
+}
+
+
+public class Main4 {
+
+	public static void main(String[] args) {
+		Player2 p=new Player2();
+
+	}
+
+}
+
+5)
+package com.day3;
+import java.util.*;
+class Venue2{
+	private String name;
+	private String  city;
+	public void setName(String str) {
+		this.name=str;
+		
+	}
+	public void setCity(String str) {
+		this.city=str;
+		
+	}
+	public String getName() {
+		// TODO Auto-generated method stub
+		return this.name;
+	}
+	public String getCity() {
+		// TODO Auto-generated method stub
+		return this.city;
+	}
+	
+}
+
+public class Main5 {
+
+	public static void main(String[] args) {
+		Venue2 v=new Venue2();
+		
+		Scanner s=new Scanner(System.in);
+		
+		int p;
+		String str;
+		while(true)
+		{
+		System.out.println("menu");
+		System.out.println("1.Update Venue name");
+		System.out.println("2.Update city name");
+		System.out.println("3.All information correct or exit");
+		System.out.println("enter choice");
+		p=s.nextInt();
+		switch(p)
+		{
+		case 1:
+		      {
+			System.out.println("Enter the venue name");
+		str=s.next();
+		v.setName(str);
+		System.out.println(v.getName());
+		break;
+		     }
+		case 2:
+		     {
+			System.out.println("Enter the city name");
+		str=s.next();
+		v.setCity(str);
+		System.out.println(v.getCity());
+		     }
+		case 3:
+		     {
+			System.out.println("venue details");
+			System.out.println(" Venue Name: "+v.getName());
+			System.out.println("City Name; "+v.getCity());
+			break;
+		     }
+		default:
+		     {
+
+			System.out.println("Type 1 or 2 or 3");
+			break;
+		    }
+	    }
+			
+}
+}
+}
+	
+
+6)
+
+package com.day3;
+import java.util.Scanner;
+
+public class ExtraType{
+	String name;
+	long runs;
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public long getRuns() {
+		return runs;
+	}
+
+	public void setRuns(long runs) {
+		this.runs = runs;
+	}
+
+}
+
+public class Main6 {
+	public static void main(String[] args) {
+
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enter the extratype details");
+		String extraTypes = s.next();
+
+		String extraTypesArray[] = extraTypes.split("#");
+
+		ExtraType extraType = new ExtraType();
+		extraType.setName(extraTypesArray[0]);
+		extraType.setRuns(Long.parseLong(extraTypesArray[1]));
+
+		System.out.println("Extra Type Details");
+		System.out.println("Extra Type:" + extraType.getName());
+		System.out.println("Runs:" + extraType.getRuns());
+	}
+}
+
+7)
+
+package com.day3;
+
+import java.util.Scanner;
+
+class Delivery20{
+	private Long over;
+	private Long ball;
+	private Long runs;
+	private String batsman;
+	private String bowler;
+	private String nonStriker;
+	public Delivery20(Long over, Long ball, Long runs, String batsman, String bowler, String nonStriker) {
+		super();
+		this.over = over;
+		this.ball = ball;
+		this.runs = runs;
+		this.batsman = batsman;
+		this.bowler = bowler;
+		this.nonStriker = nonStriker;
+	}
+	public Long getover() {
+		// TODO Auto-generated method stub
+		return over;
+	}
+	public Long getball() {
+		// TODO Auto-generated method stub
+		return ball;
+	}
+	public String getbatsman() {
+		// TODO Auto-generated method stub
+		return batsman;
+	}
+	public String getbowler() {
+		// TODO Auto-generated method stub
+		return bowler;
+	}
+	public String getnonStriker() {
+		// TODO Auto-generated method stub
+		return nonStriker;
+	}
+	
+	
+
+}
+
+public class Main7 {
+	
+
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		System.out.println("Enter the over");
+		Long o=(long) s.nextInt();
+		System.out.println("Enter the ball");
+		Long b=s.nextLong();
+		System.out.println("Enter the runs");
+		Long r=s.nextLong();
+		System.out.println("Enter the batsman");
+		String str1=s.nextLine();
+		System.out.println("Enter the bowler name");
+		String str2=s.nextLine();
+		System.out.println("enter the nonStriker");
+		String str3=s.nextLine();
+		
+		Delivery20 d=new Delivery20(o,b,r,str1,str2,str3);
+		System.out.println("Over :"+ d.getover());
+		System.out.println("Ball :"+ d.getball());
+		System.out.println("Run :"+ d.getClass());
+		System.out.println("Batsman :"+ d.getbatsman());
+		System.out.println("Bowler :"+ d.getbowler());
+		System.out.println("nonStriker :"+ d.getnonStriker());
+		
+	
+	}
+
+}
+
+8)
+package com.day3;
+
+import java.util.Scanner;
+
+
+
+class Wicket{
+	private Long over;
+	private Long ball;
+	private String wicketType;
+	private String playerName;
+	private String bowlwerName;
+	
+	public Wicket(Long over, Long ball, String wicketType,  String playerName,String bowlwerName) {
+		super();
+		this.over = over;
+		this.ball = ball;
+		wicketType = wicketType;
+		this.bowlwerName = bowlwerName;
+		this.playerName = playerName;
+	}
+	
+	public Long getover(Long over) {
+		
+		return over;
+	}
+	public Long getball(Long ball) {
+		// TODO Auto-generated method stub
+		return ball;
+	}
+	public String getplayerName(String playerName) {
+		// TODO Auto-generated method stub
+		return playerName;
+	}
+	public String wicketType(String wicketType) {
+		// TODO Auto-generated method stub
+		return wicketType;
+	}
+	public String bowlwerName(String bowlwerName) {
+		// TODO Auto-generated method stub
+		return bowlwerName;
+	}
+
+	public Long getover() {
+		// TODO Auto-generated method stub
+		return this.over;
+	}
+
+	public Long getball() {
+		// TODO Auto-generated method stub
+		return this.ball;
+	}
+
+	public String getwicketType() {
+		// TODO Auto-generated method stub
+		return this.wicketType;
+	}
+
+	public String getplayerName() {
+		// TODO Auto-generated method stub
+		return this.playerName;
+	}
+
+	public String getbowlerName() {
+		// TODO Auto-generated method stub
+		return this.bowlwerName;
+	}
+	
+	
+}
+public class Main8 {
+
+	public static void main(String[] args) {
+		System.out.println("Enter the number wickets");
+		Scanner s=new Scanner(System.in);
+		String str[]=new String[100];
+		int n=s.nextInt();
+		for(int i=0;i<n;i++)
+		{
+			System.out.println("Enter the details of wickets "+i);
+			 str[i]=s.next();
+		}
+		for(int j=0;j<n;j++)
+		{
+			String a[]=str[j].split(",");
+				long q = Long.parseLong(a[0]);
+				long q1=Long.parseLong(a[1]);
+				System.out.println("Wicket details");
+				Wicket w = new Wicket(q,q1,a[2],a[3],a[4]);
+				System.out.println("Over :"+w.getover());
+				System.out.println("Ball :"+w.getball());
+				System.out.println("WicketType :"+w.getwicketType());
+				System.out.println("PlayerName :"+w.getplayerName());
+				System.out.println("BowlerName" +w.getbowlerName());
+		
+		}
+		System.out.println("Wicket details");
+		
+
+	}
+
+}
+
+
